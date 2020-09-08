@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="username:abc@gmail.com"
+            android:textColorHighlight="#E91E63"
+            android:textColorHint="#E91E63"
+            android:textColorLink="#E91E63" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:endIconMode="password_toggle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="password:*****"
+            android:inputType="textPassword"
+            android:textColorHighlight="#E91E63"
+            android:textColorHint="#E91E63"
+            android:textColorLink="#E91E63" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/errorField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:height="40dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="#ED0D0D"
+        android:textColorHighlight="#ED0D0D"
+        android:textColorLink="#DF1818"
+        android:textSize="14sp"
+        android:visibility="invisible" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/logout_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:text="LOGIN"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+        android:textSize="18sp" />
+
+</LinearLayout>
