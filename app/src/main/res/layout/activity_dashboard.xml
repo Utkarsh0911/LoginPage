@@ -18,7 +18,7 @@
         android:layout_height="wrap_content" />
 
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/vpPager"
+        android:id="@+id/bottompager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 

@@ -12,18 +12,10 @@
         <action
             android:id="@+id/action_login_to_reg"
             app:destination="@id/reg" />
-        <action
-            android:id="@+id/action_login_to_contact"
-            app:destination="@id/contact" />
     </fragment>
     <fragment
         android:id="@+id/reg"
         android:name="com.tcs.newsapp.LoginPage.Reg"
         android:label="fragment_reg"
         tools:layout="@layout/fragment_reg" />
-    <fragment
-        android:id="@+id/contact"
-        android:name="com.tcs.newsapp.LoginPage.Contact"
-        android:label="fragment_contact"
-        tools:layout="@layout/fragment_contact" />
 </navigation>

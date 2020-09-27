@@ -52,7 +52,7 @@ class Login : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         var progress = ProgressDialog(activity)
     try {
-        logout_button.setOnClickListener{
+        login_button.setOnClickListener{
 
             if(username.text.toString().trim().equals("") || (password.text.toString().trim().equals("")))
             {

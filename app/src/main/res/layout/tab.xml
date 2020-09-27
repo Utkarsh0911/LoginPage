@@ -9,10 +9,18 @@
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#033205"
-        app:tabIndicatorColor="#FBF6F6"
-        app:tabSelectedTextColor="#14E4D1"
-        app:tabTextColor="#FAF6F6">
+        android:background="#FFFFFF"
+        app:tabIndicatorColor="#16A085"
+        app:tabSelectedTextColor="#151515"
+        app:tabTextColor="#151515">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/BuRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+
+            />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/BuLogin"
@@ -20,16 +28,5 @@
             android:layout_height="wrap_content"
             android:text="Login" />
 
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/BuRegister"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Register" />
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/BuContactUs"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ContactUs" />
     </com.google.android.material.tabs.TabLayout>
 </LinearLayout>

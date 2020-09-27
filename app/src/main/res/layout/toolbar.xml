@@ -11,19 +11,34 @@
         android:id="@+id/toolbar2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#032004"
+        android:background="#F2F4F2"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        app:titleTextColor="#F6EEEE">
+        app:subtitleTextColor="#090909"
+        app:titleTextColor="#090909">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+
+            app:srcCompat="@drawable/googleg_standard_color_18" />
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/alfa_slab_one"
+
             android:gravity="center"
-            android:text="FIREBASE AUTH!!"
-            android:textColor="#F4E8E8"
-            android:textSize="24sp" />
+            android:text="Google Nearby"
+            android:textColor="#0C0C0C"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+
+
     </androidx.appcompat.widget.Toolbar>
+
+
+
 </LinearLayout>

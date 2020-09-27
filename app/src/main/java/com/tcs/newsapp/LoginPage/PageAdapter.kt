@@ -10,7 +10,7 @@ class PageAdapter(fm:FragmentManager): FragmentPagerAdapter(fm) {
         {
            0-> {return Login()}
           1-> {return Reg()}
-           2 -> {return Contact()}
+
             else ->{return Login()}
         }
     }
@@ -20,12 +20,12 @@ class PageAdapter(fm:FragmentManager): FragmentPagerAdapter(fm) {
         {
             0 -> {return "Login"}
             1-> {return "Register"}
-            2 -> {return "Contact"}
+
         }
 
         return super.getPageTitle(position)
     }
     override fun getCount(): Int {
-       return 3;
+       return 2;
     }
 }

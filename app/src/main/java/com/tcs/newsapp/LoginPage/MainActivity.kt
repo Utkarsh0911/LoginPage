@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
 
 newsImage.startAnimation(AnimationUtils.loadAnimation(this,R.anim.top_animation))
-        newsTitle.startAnimation(AnimationUtils.loadAnimation(this,R.anim.bottom_animation))
+
 
         Timer(TIMER_NAME, false).schedule(delay = TIMER_DELAY) {
 startActivity(Intent(this@MainActivity,Dashboard::class.java))
