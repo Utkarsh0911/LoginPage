@@ -1,5 +1,6 @@
 package com.tcs.newsapp.LoginPage.ui.dashboard
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,52 +9,56 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import com.google.android.gms.maps.CameraUpdateFactory
-import com.google.android.gms.maps.GoogleMap
-import com.google.android.gms.maps.OnMapReadyCallback
-import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.*
 import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.tcs.newsapp.LoginPage.R
+import com.tcs.newsapp.LoginPage.ui.home.HomeViewModel
 import kotlinx.android.synthetic.main.activity_maps.*
 
 
 class DashboardFragment : Fragment(), OnMapReadyCallback {
+    lateinit var mMapView: MapView
 
-    private lateinit var dashboardViewModel: DashboardViewModel
+
+    private lateinit var homeViewModel: HomeViewModel
     private lateinit var mMap: GoogleMap
+
+    @SuppressLint("MissingPermission")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        dashboardViewModel =
-            ViewModelProviders.of(this).get(DashboardViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
-        val textView: TextView = root.findViewById(R.id.text_dashboard)
-        dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+        homeViewModel =
+            ViewModelProviders.of(this).get(HomeViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_home, container, false)
 
 
-        val mapFragment: SupportMapFragment? = map as SupportMapFragment?
-        mapFragment?.getMapAsync(this)
+//        mMapView = root.findViewById(R.id.mapView)
+//        mMapView.onCreate(savedInstanceState);
+//        mMapView.getMapAsync(this); //this is important
+        // Gets the MapView from the XML layout and creates it
+
+        // Gets the MapView from the XML layout and creates it
+        mMapView = root.findViewById(R.id.mapView)
+        mMapView.onCreate(savedInstanceState)
+
+        mMapView.onResume()
+        mMapView.getMapAsync(this)
 
         return root
     }
 
     override fun onMapReady(googleMap: GoogleMap) {
-        mMap = googleMap
-
-        // Add a marker in Sydney and move the camera
-        val sydney = LatLng(-34.0, 151.0)
-        val cameraPosition = CameraPosition.Builder()
-            .target(sydney).zoom(19f).build()
-        mMap.addMarker(MarkerOptions().position(sydney))
-        mMap.animateCamera(
-            CameraUpdateFactory
-                .newCameraPosition(cameraPosition)
-        )
+        mMap=googleMap
+        val sydney=LatLng(27.2048,77.4975)
+        mMap.addMarker(MarkerOptions().position(sydney).title("sydney"))
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 16.0F))
     }
 }
+
+
+
+

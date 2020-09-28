@@ -17,10 +17,10 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <FrameLayout
         android:id="@+id/fl_wrapper"
         android:layout_width="match_parent"
-        android:layout_height="607dp" />
+        android:layout_height="616dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
