@@ -26,6 +26,6 @@ class PageAdapter(fm:FragmentManager): FragmentPagerAdapter(fm) {
         return super.getPageTitle(position)
     }
     override fun getCount(): Int {
-       return 2;
+       return 2
     }
 }

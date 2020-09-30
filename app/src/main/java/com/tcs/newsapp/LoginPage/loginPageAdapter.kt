@@ -30,6 +30,6 @@ class loginPageAdapter(fm: FragmentManager): FragmentPagerAdapter(fm) {
         return super.getPageTitle(position)
     }
     override fun getCount(): Int {
-        return 3;
+        return 3
     }
 }

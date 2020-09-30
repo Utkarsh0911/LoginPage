@@ -68,7 +68,7 @@ login_button.setOnClickListener {
 
         errorField.text=""
         errorField.visibility=View.INVISIBLE
-        mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance()
         mAuth!!.createUserWithEmailAndPassword(username.text.toString(),password.text.toString())
             .addOnCompleteListener(OnCompleteListener {
                 if(it.isSuccessful)

@@ -81,7 +81,7 @@ class Login : Fragment() {
 
                 errorField.text=""
                 errorField.visibility=View.INVISIBLE
-                mAuth = FirebaseAuth.getInstance();
+                mAuth = FirebaseAuth.getInstance()
                 mAuth!!.signInWithEmailAndPassword(username.text.toString(),password.text.toString())
                     .addOnCompleteListener(OnCompleteListener {
                         if(it.isSuccessful)
