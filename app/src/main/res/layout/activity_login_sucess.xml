@@ -7,20 +7,22 @@
     android:layout_height="match_parent"
 
     android:orientation="vertical"
-    tools:context=".LoginSucess">
+    tools:context=".LoginSucess"
+    tools:menu="@menu/logout_menu">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar3"
+        android:id="@+id/login_success_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
         android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme" />
+        android:theme="?attr/actionBarTheme"
+        app:menu="@menu/logout_menu" />
 
     <FrameLayout
         android:id="@+id/fl_wrapper"
         android:layout_width="match_parent"
-        android:layout_height="616dp"/>
+        android:layout_height="616dp" />
 
     <LinearLayout
         android:layout_width="match_parent"

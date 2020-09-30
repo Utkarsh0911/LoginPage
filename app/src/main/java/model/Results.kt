@@ -25,7 +25,7 @@ class Results {
 
     private var price_level = 0
 
-    private var rating = 0
+    private var rating = 0.0
 
     private var reference: String? = null
 
@@ -109,11 +109,12 @@ class Results {
         return price_level
     }
 
-    fun setRating(rating: Int) {
+    fun setRating(rating: Double) {
         this.rating = rating
     }
 
-    fun getRating(): Int {
+    fun getRating(): Double
+    {
         return rating
     }
 
